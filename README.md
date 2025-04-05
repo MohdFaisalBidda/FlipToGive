@@ -1,7 +1,5 @@
 # FlipToGive
 
-![FlipToGive Logo](public/logo.png) <!-- Replace with actual logo path if available -->
-
 ## Description
 
 FlipToGive is a decentralized application (dApp) built on the Solana blockchain that turns a simple coin flip into a charitable opportunity. Users can flip a virtual coin, and if they get heads, a predefined amount (0.1 SOL) is automatically donated to a selected charity. This project combines blockchain technology with philanthropy to create a fun and meaningful way to contribute to charitable causes.
