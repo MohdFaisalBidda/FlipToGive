@@ -17,11 +17,11 @@ FlipToGive is a decentralized application (dApp) built on the Solana blockchain 
 
 ## Screenshots
 
-![Game Interface - The main coin flip interface where users can try their luck](public/assets/Screenshot from 2025-04-06 00-51-46.png)
+![Game Interface - The main coin flip interface where users can try their luck](public/assets/game-interface.png)
 
-![Wallet Connection - Screen showing the wallet connection process](public/assets/Screenshot from 2025-04-06 00-51-59.png)
+![Wallet Connection - Screen showing the wallet connection process](public/assets/wallet-connection.png)
 
-![Dashboard - Interface for showing all charity donated to](public/assets/Screenshot from 2025-04-06 00-52-25.png) 
+![Dashboard - Interface for showing all charity donated to](public/assets/dashboard.png) 
 
 ## Technical Stack
 
