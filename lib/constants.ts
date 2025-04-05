@@ -1,28 +1,12 @@
 import { PublicKey } from '@solana/web3.js';
 
-export const PROGRAM_ID = new PublicKey('8JJy6sL3gYvUSxRxFv5t8xDTxGJc2YrVohmw9GrapDBq');
-
 export const CHARITIES = [
   {
-    name: 'Global Education Fund',
-    address: new PublicKey('8JJy6sL3gYvUSxRxFv5t8xDTxGJc2YrVohmw9GrapDBq'),
-    description: 'Providing education opportunities worldwide',
-    website: 'https://example.org/gef',
-    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b',
-  },
-  {
-    name: 'Ocean Conservation Initiative',
-    address: new PublicKey('8JJy6sL3gYvUSxRxFv5t8xDTxGJc2YrVohmw9GrapDBq'),
-    description: 'Protecting marine ecosystems',
-    website: 'https://example.org/oci',
-    image: 'https://images.unsplash.com/photo-1583212292454-39d2a86a7921',
-  },
-  {
-    name: 'Hunger Relief Network',
-    address: new PublicKey('8JJy6sL3gYvUSxRxFv5t8xDTxGJc2YrVohmw9GrapDBq'),
-    description: 'Fighting food insecurity globally',
-    website: 'https://example.org/hrn',
-    image: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c',
+    name: 'Give Back To Those Who Need It Most',
+    address: new PublicKey('HKEWTfcx46mBTxcddpe2k1UcuJuhLw1t1NiLR5gLHMmx'),
+    description: 'Give Back To Those Who Need It Most',
+    website: 'https://islamicdonate.com',
+    image: 'https://islamicdonate.com/wp-content/uploads/2024/05/photo_2024-05-15_22-04-25-1024x573.jpg',
   },
 ];
 

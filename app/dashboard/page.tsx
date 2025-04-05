@@ -13,13 +13,10 @@ import Link from "next/link";
 import { CHARITIES } from "@/lib/constants";
 
 export default function Dashboard() {
-  const { connected } = useWallet();
-  const { connection } = useConnection();
-
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-secondary">
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           <Card className="p-6">
             <div className="flex items-center gap-4 mb-4">
               <Heart className="h-6 w-6 text-destructive" />
@@ -46,7 +43,7 @@ export default function Dashboard() {
             <p className="text-3xl font-bold">48.2%</p>
             <p className="text-muted-foreground">Heads ratio</p>
           </Card>
-        </div>
+        </div> */}
 
         <h2 className="text-2xl font-semibold mb-6">Supported Charities</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

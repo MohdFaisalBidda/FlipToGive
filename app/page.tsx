@@ -7,11 +7,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import { executeFlip } from "@/program";
 import Link from "next/link";
-import { FLIP_AMOUNT } from "@/lib/constants";
+import { CHARITIES, FLIP_AMOUNT } from "@/lib/constants";
 import { useToast } from "@/hooks/use-toast";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { WalletMultiButtonDynamic } from "@/components/ClientWalletButton";
 
 export default function Home() {
   const { toast } = useToast();
@@ -23,6 +21,7 @@ export default function Home() {
   const [flipHistory, setFlipHistory] = useState<Array<"heads" | "tails">>([]);
   const [coinRotation, setCoinRotation] = useState(0);
   const [donationTotal, setDonationTotal] = useState(0);
+  const [selectedCharity, setSelectedCharity] = useState(CHARITIES[0]);
 
   // Animation effect for coin flip
   useEffect(() => {
@@ -266,8 +265,50 @@ export default function Home() {
                 </div>
               </CardContent>
             </Card>
+            <div className="mb-6">
+              <label className="text-sm font-medium block mb-2">
+                Select Charity
+              </label>
+              <select
+                className="w-full border px-3 py-2 rounded-lg bg-background border-muted"
+                onChange={(e) =>
+                  setSelectedCharity(
+                    CHARITIES.find(
+                      (charity) => charity.name === e.target.value
+                    )!
+                  )
+                }
+                value={selectedCharity.name}
+              >
+                {CHARITIES.map((charity) => (
+                  <option key={charity.address.toBase58()} value={charity.name}>
+                    {charity.name}
+                  </option>
+                ))}
+              </select>
 
-            <Card>
+              <div className="mt-2 text-sm text-muted-foreground">
+                <div>
+                  <strong>Address:</strong>{" "}
+                  <code className="break-all">
+                    {selectedCharity.address.toBase58()}
+                  </code>
+                </div>
+                <div>
+                  <strong>Website:</strong>{" "}
+                  <a
+                    href={selectedCharity.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 underline"
+                  >
+                    {selectedCharity.website}
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* <Card>
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Heart className="h-5 w-5 text-rose-500" />
@@ -329,7 +370,7 @@ export default function Home() {
                   )}
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>
